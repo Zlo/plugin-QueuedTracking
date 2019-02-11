@@ -188,7 +188,7 @@ class Processor
             try {
                 $this->handler->process($tracker, $requestSet);
             } catch (\Exception $e) {
-                Common::printDebug('Failed to process a queued request set' . $e->getMessage());
+                Common::printDebug('Failed to process a queued request set: ' . $e->getMessage());
                 $this->handler->onException($requestSet, $e);
             }
         }
